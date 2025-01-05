@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<head>
+  <title>Form 1040</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="f1040">
+    <div class="calc">
+      <button onclick="totalIncomeCalc(); adjustedGrossIncomeCalc(); standardItemizedDeductionCalc(); qualifiedBusinessIncomeCalc(); taxableIncomeCalc(); taxCalc(); taxCalc1(); taxCalc22(); totalTaxCalc(); federalIncomeTaxWithheldCalc (); totalOtherPaymentsAndRefundableCreditsCalc (); totalPaymentsCalc(); refundOrOwe ()">Calculate</button>
+    </div>
+    <div class="header">
+      <div class="subcontainer1">
+        <span class="subcontainer2">Form</span>
+        <span class="subcontainer3">1040</span>
+      </div>
+      <div class="subcontainer1">
+        Department of the Treasury-Internal Revenue Service (99) <br /><span
+          class="subcontainer4"
+          >U.S. Individual Income Tax Return</span
+        >
+      </div>
+      <div class="subcontainer1 subcontainer3">2021</div>
+      <div class="subcontainer1">OMB No. 1545-0074</div>
+      <div class="subcontainer1">
+        IRS Use Only-Do not write or staple in this space.
+      </div>
+    </div>
+    <div class="filing-status" style="border: none" ;>
+      <div class="subcontainer4">Filing Status</div>
+      <div class="filing-status-single">
+        <input type="checkbox" value="single" />
+        <label for="single">Single</label>
+      </div>
+      <div class="filing-status-mfj">
+        <input type="checkbox" value="MFJ" />
+        <label for="MFJ">Married Filing Jointly</label>
+      </div>
+      <div class="filing-status-mfs">
+        <input type="checkbox" value="MFS" />
+        <label for="MFS">Married filing separetely (MFS)</label>
+      </div>
+      <div class="filing-status-hoh">
+        <input type="checkbox" value="HOH" />
+        <label for="HOH">Head of household (HOH)</label>
+      </div>
+      <div class="filing-status-qw">
+        <input type="checkbox" value="QW" />
+        <label for="QW">Qualigfying widow(er) (QW)</label>
+      </div>
+    </div>
+    <div class="filing-status-1">
+      <div>
+        Check only<br />
+        one box.
+      </div>
+      <div class="subcontainer5">
+        If you checked the MFS box, enter the name of your spouse. If you
+        checked the HOH or QW box, enter the child's name if the qualifying
+        <br />person is a child but not your dependent &#11208;
+        <input style="width: 60%;" type="text" />
+      </div>
+    </div>
+    <div class="principal-info">
+      <div class="subcontainer1">
+        Your first name and middle initial
+        <br />
+        <input type="text" />
+      </div>
+      <div class="subcontainer1">
+        Last name
+        <br />
+        <input type="text" />
+      </div>
+      <div class="subcontainer1">
+        Your social security number
+        <br />
+        <input type="text" />
+      </div>
+    </div>
+    <div class="secondary-info">
+      <div class="subcontainer1">
+        If joint return, spouse's first name and middle initial
+        <br />
+        <input type="text" />
+      </div>
+      <div class="subcontainer1">
+        Last name
+        <br />
+        <input type="text" />
+      </div>
+      <div class="subcontainer1">
+        Spouse's social security number
+        <br />
+        <input type="text" />
+      </div>
+    </div>
+    <div class="address">
+      <div class="address-street">
+        <div>
+          Home address (number and street). If you have a P.O.box, see
+          instructions.
+          <br />
+          <input style="width: 150%;" type="text" />
+        </div>
+        <div style="width: 40px;">
+          Apt. no.
+          <br />
+          <input style="width: 30px;" type="text" />
+        </div>
+      </div>
+      <div class="address-city">
+        <div class="no-wrap">
+          City, town or post office. If you have a foreign address, also
+          complete spaces below.
+          <br />
+          <input style="width: 80%;" type="text" />
+        </div>
+        <div>
+          State
+          <br />
+          <input style="width: 100%;" type="text" />
+        </div>
+        <div>
+          ZIP code
+          <br />
+          <input style="width: 120%;" type="text" />
+        </div>
+      </div>
+      <div class="address-foreign">
+        <div>
+          Foreign country name
+          <br />
+          <input style="width: 100%;" type="text" />
+        </div>
+        <div>
+          Foreign province/state/county
+          <br />
+          <input style="width: 40%; padding-right: 100px;" type="text" />
+        </div>
+        <div>
+          Foreign postal code
+          <br />
+          <input style="width: 115%;" type="text" />
+        </div>
+      </div>
+      <div class="presidential-election">
+        <span> Presidential Election Campaign</span><br />
+        <span
+          >Check here if you, or your <br />spouse if filing jointly, want $3
+          <br />to go to this fund. Checking a <br />
+          box below will not change <br />
+          your tax or refund.</span
+        ><br />
+        <input type="checkbox" />
+        <label>Yes</label>
+        <input type="checkbox" />
+        <label>No</label>
+      </div>
+    </div>
+    <div class="digital-asset">
+      <div class="subcontainer1">
+        At any time during 2021, did you receive, sell, exchange, or otherwise
+        dispose of any financial interest in any virtual currency?
+      </div>
+      <div class="subcontainer1">
+        <input type="checkbox" value="Yes" />
+        <label for="Yes">Yes</label>
+      </div>
+      <div class="subcontainer1 subcontainer6">
+        <input type="checkbox" value="No" />
+        <label for="No">No</label>
+      </div>
+    </div>
+    <div class="standard-deduction" style="border: none">
+      <div class="subcontainer1">Standard Deduction</div>
+      <div class="subcontainer1">Someone can claim:</div>
+      <div class="subcontainer1">
+        <input type="checkbox" value="YouAsDependent" />
+        <label for="YouAsDependent">You as a dependent</label>
+      </div>
+      <div class="subcontainer1">
+        <input type="checkbox" value="YourSpouseDependent" />
+        <label for="YourSpouseDependent">Your spouse as a dependent</label>
+      </div>
+    </div>
+    <div class="standard-deduction-1 subcontainer2">
+      <input type="checkbox" value="SpouseItemizes" />
+      <label class="" for="SpouseItemizes"
+        >Spouse itemizes on a separate return or you were a dual-status
+        alien</label
+      >
+    </div>
+    <div class="standard-deduction-2">
+      <div class="">Age/Blindness</div>
+      <div class="">You:</div>
+      <div class="subcontainer6">
+        <input type="checkbox" value="YouBornBefore" />
+        <label for="YouBornBefore">Were born before January 2, 1957</label>
+      </div>
+      <div class="subcontainer6">
+        <input type="checkbox" value="AreBlind" />
+        <label for="AreBlind">Are blind</label>
+      </div>
+      <div class="subcontainer1">Spouse:</div>
+      <div class="subcontainer6">
+        <input type="checkbox" value="SpouseBornBefore" />
+        <label for="SpouseBornBefore">Was born before January 2, 1957</label>
+      </div>
+      <div class="subcontainer6">
+        <input type="checkbox" value="IsBlind" />
+        <label for="IsBlind">Is blind</label>
+      </div>
+    </div>
+    <div class="dependents">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Dependents <span>(see instructions):</span></th>
+            <th>(2)<span> Social security </span></th>
+            <th>(3) <span>Relationship</span></th>
+            <th colspan="2">
+              (4) <span>&#10003; If qualifies for (see instructions):</span>
+            </th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>(1) <span>First name</span></th>
+            <th><span>Last name</span></th>
+            <th><span>number</span></th>
+            <th><span>to you</span></th>
+            <th><span>Child tax credit</span></th>
+            <th><span>Credit for other dependents</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="5">
+              If more<br />
+              than four <br />dependents,<br />
+              see instr.<br />
+              and check <br />here &#11208; <input type="checkbox" />
+            </td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" /></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="form">
+      <table>
+        <tbody>
+          <tr class="line-1">
+            <td rowspan="4">
+              Attach <br />
+              Sch. B if <br />
+              required.
+            </td>
+            <td class="lines">1</td>
+            <td colspan="5">Wages, salaries, tips, etc. Attach Form(s) W-2</td>
+            <td class="lines">1</td>
+            <td>
+              <input id="form-1040-line-1" type="text" />
+            </td>
+          </tr>
+          <tr class="line-2">
+            <td class="lines">2a</td>
+            <td>Tax-exempt interest</td>
+            <td class="lines">2a</td>
+            <td>
+              <input class="form-1040-line-2a" type="text" />
+            </td>
+            <td class="lines">b</td>
+            <td>Taxable interest</td>
+            <td class="lines">2b</td>
+            <td>
+              <input id="form-1040-line-2b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-3">
+            <td class="lines">3a</td>
+            <td>Qualified dividends</td>
+            <td class="lines">3a</td>
+            <td>
+              <input class="form-1040-line-3a" type="text" />
+            </td>
+            <td class="lines">b</td>
+            <td>Ordinary dividends</td>
+            <td class="lines">3b</td>
+            <td>
+              <input id="form-1040-line-3b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-4">
+            <td class="lines">4a</td>
+            <td>IRA distributions</td>
+            <td class="lines">4a</td>
+            <td>
+              <input class="form-1040-line-4a" type="text" />
+            </td>
+            <td class="lines">b</td>
+            <td>Taxable amount</td>
+            <td class="lines">4b</td>
+            <td>
+              <input id="form-1040-line-4b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-5">
+            <td></td>
+            <td class="lines">5a</td>
+            <td>Pensions and annuities</td>
+            <td class="lines">5a</td>
+            <td>
+              <input class="form-1040-line-5a" type="text" />
+            </td>
+            <td class="lines">b</td>
+            <td>Taxable amount</td>
+            <td class="lines">5b</td>
+            <td>
+              <input id="form-1040-line-5b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-6">
+            <td rowspan="12">
+              Standard <br />
+              Deduction for -<br />
+              &#8226; Single or <br />
+              Married filing <br />
+              separately, <br />
+              $12,550 <br />
+              &#8226; Married filing <br />
+              jointly or <br />
+              Qualifying <br />
+              widow(er) <br />
+              $25,100<br />
+              &#8226; Head of <br />
+              household, <br />
+              $18,800 <br />
+              &#8226; If you checked <br />
+              any box under <br />
+              Standard Deduction, <br />
+              see instructions.
+            </td>
+            <td class="lines">6a</td>
+            <td>Soc. sec. ben.</td>
+            <td class="lines">6a</td>
+            <td>
+              <input class="form-1040-line-6a" type="text" />
+            </td>
+            <td class="lines">b</td>
+            <td>Taxable amount</td>
+            <td class="lines">6b</td>
+            <td>
+              <input id="form-1040-line-6b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-7">
+            <td class="lines">7</td>
+            <td colspan="4" class="no-wrap">
+              Capital gain or (loss). Attach Schedule D if required. If not
+              required, check here
+            </td>
+            <td class="arrow-sign"><span class="arrow-sign-checkbox">&#11208;</span><input type="checkbox" />
+            </td>
+            <td class="lines">7</td>
+            <td>
+              <input id="form-1040-line-7" type="text" />
+            </td>
+          </tr>
+          <tr class="line-8">
+            <td class="lines">8</td>
+            <td colspan="5">Other income from Schedule 1, line 10</td>
+            <td class="lines">8</td>
+            <td>
+              <input id="form-1040-line-8" type="text" />
+            </td>
+          </tr>
+          <tr class="line-9">
+            <td class="lines">9</td>
+            <td colspan="4">
+              Add lines 1, 2b, 3b, 4b, 5b, 6b, 7 and 8. This is your
+              <strong> total income</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">9</td>
+            <td>
+              <input id="form-1040-line-9" readonly type="text" />
+            </td>
+          </tr>
+          <tr class="line-10">
+            <td class="lines">10</td>
+            <td colspan="5">Adjustments to income from Schedule 1, line 26</td>
+            <td class="lines">10</td>
+            <td>
+              <input id="form-1040-line-10" type="text" />
+            </td>
+          </tr>
+          <tr class="line-11">
+            <td class="lines">11</td>
+            <td colspan="4">
+              Subtract line 10 from line 9. This is your
+              <strong>adjusted gross income</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">11</td>
+            <td>
+              <input id="form-1040-line-11" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-12">
+            <td class="lines">12a</td>
+            <td colspan="3">
+              <strong>Standard deduction or itemized deductions</strong> (from
+              Schedule A)
+            </td>
+            <td class="lines">12a</td>
+            <td>
+              <input id="form-1040-line-12a" type="text" />
+            </td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+          </tr>
+          <tr class="line-12b">
+            <td class="lines">b</td>
+            <td colspan="3">
+              Charitable contributions if you take the standard deduction (see
+              instructions)
+            </td>
+            <td class="lines">12b</td>
+            <td>
+              <input id="form-1040-line-12b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-12c">
+            <td class="lines">c</td>
+            <td colspan="5">Add lines 12a and 12b</td>
+            <td class="lines">12c</td>
+            <td>
+              <input id="form-1040-line-12c" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-13">
+            <td class="lines">13</td>
+            <td colspan="5">
+              Qualified business income deduction from Form 8995 or Form 8995-A
+            </td>
+            <td class="lines">13</td>
+            <td>
+              <input id="form-1040-line-13" type="text" />
+            </td>
+          </tr>
+          <tr class="line-14">
+            <td class="lines">14</td>
+            <td colspan="4">Add lines 12c and 13</td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">14</td>
+            <td>
+              <input id="form-1040-line-14" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-15">
+            <td class="lines">15</td>
+            <td colspan="5">
+              <strong>Taxable income.</strong> Subtract line 14 from line 11. If
+              zero or less, enter -0-
+            </td>
+            <td class="lines">15</td>
+            <td>
+              <input id="form-1040-line-15" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-16">
+            <td></td>
+            <td class="lines">16</td>
+            <td colspan="2">
+              <strong>Tax</strong> (see instructions). Check if any from Form(s):
+               <td>1<input type="checkbox" /><label>8814</label>
+               </td> 
+               <td colspan="2">2 <input type="checkbox" /><label>4972</label></td>
+            </td>
+            <td rowspan="2" class="lines">16</td>
+            <td rowspan="2">
+              <input id="form-1040-line-16" type="text" />
+            </td>
+          </tr>
+          <tr class="line-16-3">
+            <td></td>
+            <td></td>
+            <td colspan="1" style="text-align: left;">3 <input type="checkbox" />
+            <input type="text" /></td>
+            <td></td>
+          </tr>
+          <tr class="line-17">
+            <td></td>
+            <td class="lines">17</td>
+            <td colspan="5">Amount from Schedule 2, line 3</td>
+            <td class="lines">17</td>
+            <td>
+              <input id="form-1040-line-17" type="text" />
+            </td>
+          </tr>
+          <tr class="line-18">
+            <td></td>
+            <td class="lines">18</td>
+            <td colspan="5">Add lines 16 and 17</td>
+            <td class="lines">18</td>
+            <td>
+              <input id="form-1040-line-18" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-19">
+            <td></td>
+            <td class="lines">19</td>
+            <td colspan="5">
+              Nonrefundable child tax credit or credit for other dependents from
+              Schedule 8812
+            </td>
+            <td class="lines">19</td>
+            <td><input id="form-1040-line-19" type="text" /></td>
+          </tr>
+          <tr class="line-20">
+            <td></td>
+            <td class="lines">20</td>
+            <td colspan="5">Amount from Schedule 3, line 8</td>
+            <td class="lines">20</td>
+            <td>
+              <input id="form-1040-line-20" type="text" />
+            </td>
+          </tr>
+          <tr class="line-21">
+            <td></td>
+            <td class="lines">21</td>
+            <td colspan="5">Add lines 19 and 20</td>
+            <td class="lines">21</td>
+            <td>
+              <input id="form-1040-line-21" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-22">
+            <td></td>
+            <td class="lines">22</td>
+            <td colspan="5">
+              Subtract line 21 from line 18. If zero or less, enter -0-
+            </td>
+            <td class="lines">22</td>
+            <td>
+              <input id="form-1040-line-22" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-23">
+            <td></td>
+            <td class="lines">23</td>
+            <td colspan="5">
+              Other taxes, including self-employment tax, from Schedule 2, line
+              21
+            </td>
+            <td class="lines">23</td>
+            <td>
+              <input id="form-1040-line-23" type="text" />
+            </td>
+          </tr>
+          <tr class="line-24">
+            <td></td>
+            <td class="lines">24</td>
+            <td colspan="4">
+              Add lines 22 and 23. This is your <strong>total tax</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">24</td>
+            <td>
+              <input id="form-1040-line-24" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-25">
+            <td></td>
+            <td class="lines">25</td>
+            <td colspan="5">Federal income tax withheld from:</td>
+            <td rowspan="4"></td>
+            <td rowspan="4"></td>
+          </tr>
+          <tr class="line-25a">
+            <td></td>
+            <td class="lines">a</td>
+            <td colspan="3">Form(s) W-2</td>
+            <td class="lines">25a</td>
+            <td>
+              <input id="form-1040-line-25a" type="text" />
+            </td>
+          </tr>
+          <tr class="line-25b">
+            <td></td>
+            <td class="lines">b</td>
+            <td colspan="3">Form(s) 1099</td>
+            <td class="lines">25b</td>
+            <td>
+              <input id="form-1040-line-25b" type="text" />
+            </td>
+          </tr>
+          <tr class="line-25c">
+            <td></td>
+            <td class="lines">c</td>
+            <td colspan="3">Other forms (see instructions)</td>
+            <td class="lines">25c</td>
+            <td>
+              <input id="form-1040-line-25c" type="text" />
+            </td>
+          </tr>
+          <tr class="line-25d">
+            <td></td>
+            <td class="lines">d</td>
+            <td colspan="5">Add lines 25a thtough 25c</td>
+            <td class="lines">25d</td>
+            <td>
+              <input id="form-1040-line-25d" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-26">
+            <td rowspan="2">
+              If you have a <br />
+              qualifying child, <br />
+              attach Sch. EIC.
+            </td>
+            <td class="lines">26</td>
+            <td colspan="5">
+              2021 estimated tax payments and amount applied from 2020 return
+            </td>
+            <td class="lines">26</td>
+            <td>
+              <input id="form-1040-line-26" type="text" />
+            </td>
+          </tr>
+          <tr class="line-27a">
+            <td class="lines">27a</td>
+            <td colspan="3">Earned income credit (EIC)</td>
+            <td class="lines">27a</td>
+            <td>
+              <input id="form-1040-line-27a" type="text" />
+            </td>
+            <td rowspan="8"></td>
+            <td rowspan="8"></td>
+          </tr>
+          <tr class="line-27-2">
+            <td></td>
+            <td></td>
+            <td colspan="5">
+              Check here if you were born after January 1, 1998, and before
+              <br />
+              January 2, 2004, and you satisfy all other requirements for <br />
+              taxpayers who are at least age 18, to claim the EIC. See
+              instructions &#11208; <input type="checkbox" />
+            </td>
+          </tr>
+          <tr class="line-27b">
+            <td></td>
+            <td class="lines">b</td>
+            <td>Nontaxable combat pay election</td>
+            <td class="lines">27b</td>
+            <td>
+              <input type="text" />
+            </td>
+            <td colspan="2"></td>
+          </tr>
+          <tr class="line-27c">
+            <td></td>
+            <td class="lines">c</td>
+            <td class="no-wrap">Prior year (2019) earned income</td>
+            <td class="lines">27c</td>
+            <td>
+              <input type="text" />
+            </td>
+            <td colspan="2"></td>
+          </tr>
+          <tr class="line-28">
+            <td></td>
+            <td class="lines">28</td>
+            <td colspan="3">
+              Refundable child tax credit or additional child tax credit from
+              Sch. 8812
+            </td>
+            <td class="lines">28</td>
+            <td>
+              <input id="form-1040-line-28" type="text" />
+            </td>
+          </tr>
+          <tr class="line-29">
+            <td></td>
+            <td class="lines">29</td>
+            <td colspan="3">
+              American opportunity credit from Form 8863, line 8
+            </td>
+            <td class="lines">29</td>
+            <td>
+              <input id="form-1040-line-29" type="text" />
+            </td>
+          </tr>
+          <tr class="line-30">
+            <td></td>
+            <td class="lines">30</td>
+            <td colspan="3">Recovery rebate credit. See instructions</td>
+            <td class="lines">30</td>
+            <td>
+              <input id="form-1040-line-30" type="text" />
+            </td>
+          </tr>
+          <tr class="line-31">
+            <td></td>
+            <td class="lines">31</td>
+            <td colspan="3">Amount from Schedule 3, line 15</td>
+            <td class="lines">31</td>
+            <td>
+              <input id="form-1040-line-31" type="text" />
+            </td>
+          </tr>
+          <tr class="line-32">
+            <td></td>
+            <td class="lines">32</td>
+            <td colspan="4" class="no-wrap">
+              Add lines 27a and 28 through 31. These are your
+              <strong>total other payments and refundable credits</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">32</td>
+            <td>
+              <input id="form-1040-line-32" type="text" readonly/>
+            </td>
+          </tr>
+          <tr class="line-33">
+            <td></td>
+            <td class="lines">33</td>
+            <td colspan="4">
+              Add lines 25d, 26, and 32. These are your
+              <strong>total payments</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">33</td>
+            <td>
+              <input id="form-1040-line-33" type="text" readonly/>
+            </td>
+          </tr>
+    <div class="form-refund">
+         <tr class="line-34">
+          <td rowspan="5" class="no-wrap">
+            Refund <br />
+            Direct deposit?<br />
+            See instructions.
+          </td>
+          <td class="lines">34</td>
+          <td colspan="5">
+            If line 33 is more than line 24, subtract line 24 from line 33.
+            This is the amount you <strong>overpaid</strong>
+          </td>
+          <td>34</td>
+          <td><input id="form-1040-line-34" type="text" readonly/></td>
+         </tr>
+         <tr class="line-35">
+            <td class="lines">35a</td>
+            <td colspan="4">
+              Amount of line 34 you want <strong>refunded to you</strong>. If Form 8888 is
+              attached, check here
+            </td>
+            <td class="arrow-sign">&#11208;<input type="checkbox" /></td>
+            <td>35a</td>
+            <td><input type="text" /></td>
+         </tr>
+         <tr class="line-35b">
+            <td class="lines">&#11208;b</td>
+            <td colspan="" class="no-wrap">
+                <label for="routing-number">Routing number</label>
+                <input id="routing-number" type="text"/></td>
+            <td class="lines">&#11208;c</td>
+            <td colspan="3"> Type: 
+                <input type="checkbox">
+                <label>Checking</label>
+                <input type="checkbox">
+                <label>Savings</label>
+            </td>
+            <td rowspan="3"></td>
+            <td rowspan="3"></td>
+         </tr>
+         <tr class="line-35d">
+            <td class="lines">&#11208;d</td>
+            <td colspan="2" class="no-wrap"><label for="account-number">Account number</label><input id="account-number" type="text" /></td>
+            <td></td>
+            <td></td>
+         </tr>
+         <tr class="line-36">
+            <td class="lines">36</td>
+            <td colspan="2" class="no-wrap">
+              Amount of line 34 you want <strong>applied to your 2022 estimated tax</strong>
+            </td>
+            <td class="arrow-sign">&#11208;</td>
+            <td>36</td>
+            <td><input type="text"></td>
+         </tr>
+    </div>
+    <div class="form-owe">
+        <tr class="line-37">
+            <td rowspan="2">Amount <br>
+            You Owe</td>
+            <td class="lines">37</td>
+            <td colspan="4"><strong>Amount you owe.</strong> Subtract line 33 from line 24. For details on how to pay, see instructions</td>
+            <td class="arrow-sign">&#11208;</td>
+            <td>37</td>
+            <td><input id="form-1040-line-37" type="text" readonly></td>
+        </tr>
+        <tr class="line-38">
+            <td class="lines">38</td>
+            <td colspan="2">Estimted tax penalty (see instructions)</td>
+            <td class="arrow-sign">&#11208;</td>
+            <td class="lines">38</td>
+            <td><input id="form-1040-line-38" type="text"></td>
+            <td colspan="2"></td>
+        </tr>
+    </div>
+        </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+  <div class="footer">
+    <p>Created in 2024</p>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+
+</html>
